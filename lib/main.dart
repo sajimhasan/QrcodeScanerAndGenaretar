@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
+import 'package:qrcode_scaner/UI/homeSrceen.dart';
 
 void main() {
   runApp(QRApp());
@@ -115,6 +116,10 @@ class _QRScannerState extends State<QRScanner> {
               child: Text("Scanned Data: $scannedData"),
             ),
           ),
+          ElevatedButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (_)=> Homescreen()));
+
+          }, child: Text('Home page'))
         ],
       ),
     );
